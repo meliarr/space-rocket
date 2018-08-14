@@ -6,10 +6,31 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
-        <script type="text/javascript">console.log('hello there, friends!!!');</script>
+        <script type="text/javascript">
+            var car = {
+                make: 'VW',
+                type: 'Polo',
+                color: 'blue',
+                isTurnedOn: false,
+                numberOfWheels: 4,
+                seats: [
+                    'seat 1', 
+                    'seat 2', 
+                    'seat 3', 
+                    'seat 4'
+                ],
+                turnOn: function() {
+                    this.isTurnedOn = true;
+                },
+                fly: function() {
+                    alert('fly');
+                }
+            };
+        console.log('hello there, friends!!!');
+        </script>
     </head>
     <body>
         <h1>Hello JS Rocket</h1>
-        <script src="" async defer></script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

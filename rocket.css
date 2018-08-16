@@ -27,8 +27,8 @@ a.button {
     transition: color 300ms;
 }
 
-a.hover {
-    color: red;
+a:hover {
+    color: blueviolet;
 }
 
 .right {

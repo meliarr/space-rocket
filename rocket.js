@@ -14,6 +14,20 @@ var changeState = function (state) {
             countdownNumber = countdownNumber - 1;
             document.getElementById('countdown').innerHTML = countdownNumber;
             
+            if (countdownNumber > 4 && countdownNumber <= 7) {
+                //be nervous
+                document.getElementById('nervous').className = 'nervous show';
+            } else {
+                document.getElementById('nervous').className = 'nervous';
+            }
+
+            if (countdownNumber > 1 && countdownNumber <= 4) {
+                //can't wait!
+                document.getElementById('cant-wait').className = 'cant-wait show';
+            } else {
+                document.getElementById('cant-wait').className = 'cant-wait';
+            }
+
             if (countdownNumber <= 0) {
                 changeState(3);
             }
@@ -22,11 +36,13 @@ var changeState = function (state) {
         var success = setTimeout(function ()
             {
                 var randomNumber = Math.round(Math.random()*10);
-                if (randomNumber > 5) {
+                if (randomNumber > 2) {
                     changeState(4); //well done!
                 } else {
                     changeState(5); // oh no!
                 }
     }, 2000);
     };
+
+    /*find out how to make the message disappear if user clicks abort */
 }
